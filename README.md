@@ -5,10 +5,10 @@ INTERVIEW-QUESTIONS:
 
 Missing values occur when data entries are absent for some variables in a dataset.
 Handling them:
-
 Remove rows/columns: Use `dropna()` if missing data is small.
 Imputation: Fill with mean, median, mode, or use advanced methods like KNN or regression.
 Flagging: Create a separate indicator for missing values.
+
 ----------------------------------------------------------------------------
 2. How do you treat duplicate records?**
 Duplicates are rows that appear more than once.
@@ -31,24 +31,26 @@ Treatment:
  Cap or floor extreme values (Winsorization).
 
 Transform data (log, square root) to reduce impact.
+
 ----------------------------------------------------------------------------------
 5. Explain the process of standardizing data.
-Standardization rescales data to have a **mean = 0** and **standard deviation = 1**.
-* **Formula:**
+Standardization rescales data to have a mean = 0 and standard deviation = 1
+Formula:
 
 $$
 Z = \frac{X - \mu}{\sigma}
 $$
-
  $X$ = original value, $\mu$ = mean, $\sigma$ = standard deviation
  Purpose:
  Ensures features contribute equally to distance-based algorithms like KNN, SVM.
+
+
  ---------------------------------------------------------------------------------------
 6. How do you handle inconsistent data formats (e.g., date/time)?
  Identify inconsistencies (e.g., `DD/MM/YYYY` vs `MM-DD-YYYY`).
 Convert to a uniform format using Pandas:
-
 df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
+
 ------------------------------------------------------------------------------------
 
 7. What are common data cleaning challenges?
